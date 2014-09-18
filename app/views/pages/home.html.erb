@@ -1,2 +1,32 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<% provide(:title, 'Home') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= yield(:title) %></title>
+</head>
+<body>
+
+<h1>Welcome to the Farrier App!</h1>
+
+<div class="contain-fluid">
+  <form role="form">
+    <div class="form-group">
+      <label for="client_input">Client Name</label>
+      <input type="client_name" class="form-control" id="client_input" placeholder="Enter Client's name">
+    </div>
+    <div class="form-group">
+      <label for="address_input">Client Address</label>
+      <input type="client_address" class="form-control" id="address_input" placeholder="Enter Client's Address">
+    </div>
+    <div class="form-group">
+      <label for="horse_count_input">Number Of Horses</label>
+      <input type="number_of_horses" class="form-control" id="horse_count_input" placeholder="Enter number of horses">
+    </div>
+  </form>
+</div>
+
+
+</body>
+</html>
